@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>566</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>凯特信安AI客服系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>:/resource/logo.jpg</normalon>
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QListWidget" name="listWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>566</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_save_history"/>
+    <addaction name="action_open_history_dir"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="action_set_chat_box"/>
+    <addaction name="action_set_text_box"/>
+    <addaction name="action_set_sendBtn_box"/>
+    <addaction name="action_top"/>
+    <addaction name="action_advance_setting"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_help"/>
+   </widget>
+   <widget class="QMenu" name="menu_start">
+    <property name="title">
+     <string>点击开始</string>
+    </property>
+    <addaction name="action_startOrStop"/>
+   </widget>
+   <widget class="QMenu" name="menu_aiMode">
+    <property name="title">
+     <string>手动回复</string>
+    </property>
+    <addaction name="action_aiMode"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_aiMode"/>
+   <addaction name="menu_start"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">QStatusBar::item {
+    min-height: 100px; /* 设置最小高度 */
+}</string>
+   </property>
+  </widget>
+  <action name="action_save_history">
+   <property name="text">
+    <string>导出历史记录</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_set_chat_box">
+   <property name="text">
+    <string>设置识别文本框</string>
+   </property>
+  </action>
+  <action name="action_set_sendBtn_box">
+   <property name="text">
+    <string>设置发送按钮框</string>
+   </property>
+  </action>
+  <action name="action_help">
+   <property name="text">
+    <string>使用方法</string>
+   </property>
+  </action>
+  <action name="action_top">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>置顶</string>
+   </property>
+  </action>
+  <action name="action_set_text_box">
+   <property name="text">
+    <string>设置发送文本框</string>
+   </property>
+  </action>
+  <action name="action_manualMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>手动应答</string>
+   </property>
+  </action>
+  <action name="action_autoMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>自动应答</string>
+   </property>
+  </action>
+  <action name="action_startOrStop">
+   <property name="text">
+    <string>开始</string>
+   </property>
+  </action>
+  <action name="action_aiMode">
+   <property name="text">
+    <string>切换成自动回复模式</string>
+   </property>
+   <property name="toolTip">
+    <string>切换成自动回复模式</string>
+   </property>
+  </action>
+  <action name="action_open_history_dir">
+   <property name="text">
+    <string>打开聊天记录文件夹</string>
+   </property>
+  </action>
+  <action name="action_advance_setting">
+   <property name="text">
+    <string>高级设置</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

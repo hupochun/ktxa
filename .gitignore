@@ -1,0 +1,8 @@
+build/
+.qtc_clangd
+debug/
+release/
+*.user
+Makefile*
+ui_*
+zh_CN.qm
