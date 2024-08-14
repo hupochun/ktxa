@@ -185,6 +185,8 @@ void SimulatePaste()
     SendInput(ARRAYSIZE(inputs), inputs, sizeof(INPUT));
 }
 
+
+
 void SimulateMouseClick(int x, int y)
 {
     // Move the cursor to the specified screen coordinates
@@ -501,6 +503,7 @@ bool isValidTime(const QString &timeStr)
     bool isValid = dateTime.fromString(timeStr, "hh:mm:ss").isValid();
     return isValid;
 }
+
 
 
 

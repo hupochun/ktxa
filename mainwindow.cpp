@@ -28,7 +28,6 @@
 #include "QDesktopServices"
 #include "advancesettingdialog.h"
 #include <QScrollBar>
-//抱歉,您的问题暂未收录,请联系人工客服.AdvanceSettingDialog* dlg;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -570,16 +569,16 @@ void MainWindow::autoCopyAndSend(QString answer, bool bShouldSend){
 
     QRect selectedTextRect = m_textRect.getSelectedRect();
     QPoint selectedTextRectCenterPoint = selectedTextRect.center();
+    // if(bShouldSend){
+        // copy
+        SimulateMouseClick(selectedTextRectCenterPoint.x(), selectedTextRectCenterPoint.y());
 
-    // copy
-    SimulateMouseClick(selectedTextRectCenterPoint.x(), selectedTextRectCenterPoint.y());
+        SimulatePaste();
 
-    SimulatePaste();
+        ui->statusbar->showMessage(tr("MainWindow", "copy to text rect success"), 3000);
 
-    ui->statusbar->showMessage(tr("MainWindow", "copy to text rect success"), 3000);
-
-    // send
-    if(bShouldSend){
+        // send
+        if(bShouldSend){
         QRect selectedSendBtnRect = m_sendBtnRect.getSelectedRect();
         QPoint sendBtnCenterPoint = selectedSendBtnRect.center();
 
@@ -588,7 +587,7 @@ void MainWindow::autoCopyAndSend(QString answer, bool bShouldSend){
         ui->statusbar->showMessage(tr("MainWindow", "auto send success"), 3000);
     }
 
-    SimulateMouseClick(oldCursorPoint.x(), oldCursorPoint.y());
+    SetCursorPos(oldCursorPoint.x(), oldCursorPoint.y());
 }
 
 void MainWindow::hideAllDrawRect(){
@@ -1121,3 +1120,4 @@ void MainWindow::on_update_capWnd_timeout()
         }
     }
 }
+

@@ -25,6 +25,7 @@ SOURCES += \
     ocrresult.cpp \
     qaitem.cpp \
     qthttprequestmanager.cpp \
+    revise.cpp \
     selectedrect.cpp \
     selectrect.cpp \
     settings.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     ocrresult.h \
     qaitem.h \
     qthttprequestmanager.h \
+    revise.h \
     selectedrect.h \
     selectrect.h \
     settings.h \
@@ -51,6 +53,7 @@ FORMS += \
     mainwindow.ui \
     ocrdrawwidget.ui \
     qaitem.ui \
+    revise.ui \
     selectedrect.ui \
     selectrect.ui
 
